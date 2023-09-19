@@ -24,6 +24,10 @@ export default function Home() {
   async function handleSubmit(event: FormEvent) { 
     event.preventDefault()
 
+    if(email == '' || password == '') {
+      return
+    }
+
     let data = {
       email,
       password
