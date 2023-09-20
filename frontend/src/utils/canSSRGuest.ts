@@ -1,5 +1,4 @@
 import { GetServerSideProps, GetServerSidePropsContext, GetServerSidePropsResult } from "next";
-
 import { parseCookies } from "nookies";
 
 // funcao para paginas que so podem acessar visitantes
