@@ -6,6 +6,8 @@ import { Header } from "../../components/Header";
 import { setupAPIClient } from '../../services/api';
 import { toast } from 'react-toastify';
 
+import { canSSRAuthenticated } from '../../utils/canSSRAuthenticated'; 
+
 export default function Category() {
     const [name, setName] = useState('')
 
@@ -52,3 +54,10 @@ export default function Category() {
         </>
     )
 }
+
+
+export const getServerSideProps = canSSRAuthenticated(async (ctx) => {
+    return {
+        props: {}
+    }
+});
