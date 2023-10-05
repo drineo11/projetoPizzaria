@@ -57,6 +57,8 @@ export default function Category() {
 
 
 export const getServerSideProps = canSSRAuthenticated(async (ctx) => {
+    
+
     return {
         props: {}
     }
