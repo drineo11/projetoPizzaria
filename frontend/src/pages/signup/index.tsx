@@ -90,7 +90,7 @@ export default function SignUp() {
             >Cadastrar
             </Button>
 
-            <Link legacyBehavior href='/'>
+            <Link href='/'>
               <a className={styles.text}>Já possui uma conta? Faça Login</a>
             </Link>
           </form>
