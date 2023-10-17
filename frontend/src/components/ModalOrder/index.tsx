@@ -39,7 +39,7 @@ export function ModalOrder({ isOpen, onRequestClose, order, handleFinishOrder }:
       <div className={styles.container}>
         <h2>Detalhes</h2>
         <span className={styles.table}>
-          Mesa: <strong>{order[0].order.table}</strong>
+          Mesa: <strong>{order[0]?.order?.table}</strong>
         </span>
 
         {order.map((item) => (
@@ -53,7 +53,7 @@ export function ModalOrder({ isOpen, onRequestClose, order, handleFinishOrder }:
           </section>
         ))}
 
-        <button className={styles.buttonOrder} onClick={() => handleFinishOrder(order[0].order_id)}>
+        <button className={styles.buttonOrder} onClick={() => handleFinishOrder(order[0]?.order_id)}>
           Concluir pedido
         </button>
       </div>
